@@ -1,0 +1,19 @@
+/^Actual Message/{
+	p
+	n
+	h
+	:middle
+	n
+	/^Actual Message:::/!b end
+	H
+	g
+	s/\nActual Message:::/ /p
+	n
+	h
+	$!b middle
+	:end
+	x
+	p
+	$!b middle
+}
+p
